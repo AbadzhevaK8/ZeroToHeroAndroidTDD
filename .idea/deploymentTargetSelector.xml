@@ -7,7 +7,7 @@
       </SelectionState>
       <SelectionState runConfigName="Task001Test">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-03-24T19:44:27.849333800Z">
+        <DropdownSelection timestamp="2025-03-27T15:53:41.678428Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\k8\.android\avd\Pixel_4.avd" />
@@ -15,6 +15,9 @@
           </Target>
         </DropdownSelection>
         <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="test_add_button()">
+        <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
   </component>
