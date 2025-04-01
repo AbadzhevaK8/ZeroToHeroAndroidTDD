@@ -40,10 +40,10 @@
       </SelectionState>
       <SelectionState runConfigName="test_keep_text()">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-04-01T19:51:40.901441300Z">
+        <DropdownSelection timestamp="2025-04-01T20:25:35.926985900Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\k8\.android\avd\Pixel_4.avd" />
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=b7b6aec4" />
             </handle>
           </Target>
         </DropdownSelection>
