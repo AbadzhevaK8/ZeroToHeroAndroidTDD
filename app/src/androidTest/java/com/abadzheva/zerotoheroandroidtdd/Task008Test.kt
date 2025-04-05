@@ -15,18 +15,19 @@ import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.hamcrest.Matchers.allOf
+import org.hamcrest.Matchers.not
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class Task007Test {
+class Task008Test {
 
     @get:Rule
     var activityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
 
     @Test
-    fun test_keep_text() {
+    fun test_hide_text() {
         onView(
             allOf(
                 isAssignableFrom(TextView::class.java),
@@ -39,18 +40,18 @@ class Task007Test {
 
         onView(
             allOf(
-                withId(R.id.changeButton),
-                withText("change"),
+                withId(R.id.hideButton),
+                withText("hide"),
                 isAssignableFrom(Button::class.java),
                 withParent(isAssignableFrom(LinearLayout::class.java)),
                 withParent(withId(R.id.rootLayout))
             )
         ).check(isCompletelyBelow(withId(R.id.titleTextView)))
 
-        onView(withId(R.id.changeButton)).perform(ViewActions.click())
-        onView(withId(R.id.titleTextView)).check(matches(withText("I am an Android Developer!")))
+        onView(withId(R.id.hideButton)).perform(ViewActions.click())
+        onView(withId(R.id.titleTextView)).check(matches(not(isDisplayed())))
 
         activityScenarioRule.scenario.recreate()
-        onView(withId(R.id.titleTextView)).check(matches(withText("I am an Android Developer!")))
+        onView(withId(R.id.titleTextView)).check(matches(not(isDisplayed())))
     }
 }
