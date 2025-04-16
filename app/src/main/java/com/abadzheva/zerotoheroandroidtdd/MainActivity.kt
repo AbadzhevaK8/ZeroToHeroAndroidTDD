@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val rootLayout = findViewById<ViewGroup>(R.id.rootLayout)
 
         isRemoved = savedInstanceState?.getBoolean(KEY_REMOVED, false) ?: false
+        removeBtn.isEnabled = !isRemoved
 
         if (!isRemoved) {
             tv = findViewById(R.id.titleTextView)
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                 isRemoved = true
                 tv = null
             }
+            removeBtn.isEnabled = false
         }
     }
 
